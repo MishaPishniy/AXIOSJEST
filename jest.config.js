@@ -1,5 +1,9 @@
 export default {
   testEnvironment: 'node',
   verbose: true,
-  transform: {}
+  transform: {},
+  reporters: [
+    'default',
+    'jest-html-reporters'
+  ]
 };
