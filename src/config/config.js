@@ -1,9 +1,7 @@
-const dotenv = require('dotenv');
+import dotenv from 'dotenv';
 
 dotenv.config();
 
-const config = {
+export const config = {
   baseURL: process.env.BASE_URL
 };
-
-module.exports = { config };

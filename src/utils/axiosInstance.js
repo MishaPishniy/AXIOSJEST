@@ -1,12 +1,10 @@
-const axios = require('axios');
-const { config } = require('../config/config');
+import axios from 'axios';
+import { config } from '../config/config.js';
 
-const apiClient = axios.create({
+export const apiClient = axios.create({
   baseURL: config.baseURL,
   timeout: 5000,
   headers: {
     'Content-Type': 'application/json'
   }
 });
-
-module.exports = { apiClient };

@@ -1,4 +1,5 @@
-module.exports = {
+export default {
   testEnvironment: 'node',
-  verbose: true
+  verbose: true,
+  transform: {}
 };

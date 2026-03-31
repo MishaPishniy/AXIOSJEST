@@ -1,15 +1,11 @@
-const { apiClient } = require('../utils/axiosInstance');
+import { apiClient } from '../utils/axiosInstance.js';
 
-const getAllPosts = () => apiClient.get('/posts');
-const getPostById = (id) => apiClient.get(`/posts/${id}`)
-const createPost = (body) => apiClient.post('/posts', body)
-const updatePost = (id, body) => apiClient.put(`/posts/${id}`, body);
-const deletePost = (id) => apiClient.delete(`/posts/${id}`);
+export const getAllPosts = () => apiClient.get('/posts');
 
-module.exports = {
-  getAllPosts,
-  getPostById,
-  createPost,
-  updatePost,
-  deletePost
-};
+export const getPostById = (id) => apiClient.get(`/posts/${id}`);
+
+export const createPost = (body) => apiClient.post('/posts', body);
+
+export const updatePost = (id, body) => apiClient.put(`/posts/${id}`, body);
+
+export const deletePost = (id) => apiClient.delete(`/posts/${id}`);
